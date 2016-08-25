@@ -14,7 +14,7 @@ public class VariableTest extends AppCompatActivity {
         boolean q = true;
         String primitiveTypes = "There are 8 primitive types!";
         float decimalNumber = 6.5f;
-        long lastNumber = 1000000000;
+        long lastNumber = 1000000000000000L;
         byte aNumber = 83;
         char j = '&';
         short anotherNumber = 32500;
