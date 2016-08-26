@@ -26,7 +26,7 @@ public class VariableTest extends AppCompatActivity {
         System.out.println("Use " + decimalNumber + "apples for the pie.");
         System.out.println("The global ant population exceeds " + lastNumber);
         System.out.println("The atomic number of Bismuth is " + aNumber);
-        System.out.println("This and symbol " + j + "is called an ampersand.");
+        System.out.println("This and symbol " + j + " is called an ampersand.");
         System.out.println("Liechtenstein's population, " + anotherNumber + ", is the smallest of any country.");
         System.out.println("An example of a double primitive type is " + preciseNumber);
     }
