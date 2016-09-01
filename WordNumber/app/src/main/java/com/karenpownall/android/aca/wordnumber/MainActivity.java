@@ -8,10 +8,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mConvertButton;
-    TextView mEditText;
-    TextView mResultText;
-
+    private Button mConvertButton;
+    private TextView mEditText;
+    private TextView mResultText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +21,6 @@ public class MainActivity extends AppCompatActivity {
         mConvertButton = (Button) findViewById(R.id.convertButton);
         mEditText = (TextView) findViewById(R.id.editText);
 
-        //char firstChar = mEditText.getText().toString.charAt(0);
-       // char secondChar= mEditText.getText().toString.charAt(1);
-
-
         mConvertButton.setOnClickListener(new View.OnClickListener() {
             //use switch statement for conversion (take words, make numbers)
 
@@ -35,58 +30,52 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                charOne = mEditText.getText().charAt(0);
-                charTwo = mEditText.getText().charAt(1);
+                charOne = mEditText.getText().toString().toLowerCase().charAt(0);
+                charTwo = mEditText.getText().toString().toLowerCase().charAt(1);
+                //charOne = mEditText.getText().charAt(0);
+                // also valid, but will run into capitalization issues
+                //have to use .toString() to use .toLowerCase()
+                //controls caps
 
                 switch (charOne){
-                    case 'O':
+                    case 'o':
                         longNumber = 1L;
-                        mResultText.setText(String.valueOf(longNumber));
                         break;
-                    case 'E':
+                    case 'e':
                         longNumber = 8L;
-                        mResultText.setText(String.valueOf(longNumber));
                         break;
-                    case 'N':
+                    case 'n':
                         longNumber = 9L;
-                        mResultText.setText(String.valueOf(longNumber));
                         break;
-                    case 'F':
-                        if (charTwo == 'O') {
+                    case 'f':
+                        if (charTwo == 'o') {
                             longNumber = 4L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
-                        } else if (charTwo == 'I'){
+                        } else if (charTwo == 'i'){
                             longNumber = 5L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
                         }
-                    case 'S':
-                        if (charTwo == 'I'){
+                    case 's':
+                        if (charTwo == 'i'){
                             longNumber = 6L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
-                        } else if (charTwo == 'E'){
+                        } else if (charTwo == 'e'){
                             longNumber = 7L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
                         }
-                    case 'T':
-                        if (charTwo == 'W'){
+                    case 't':
+                        if (charTwo == 'w'){
                             longNumber = 2L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
-                        } else if (charTwo == 'H'){
+                        } else if (charTwo == 'h'){
                             longNumber = 3L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
-                        } else if (charTwo == 'E'){
+                        } else if (charTwo == 'e'){
                             longNumber = 10L;
-                            mResultText.setText(String.valueOf(longNumber));
                             break;
                         }
                 }
-                //mResultText.setText
+                mResultText.setText("The number is: " + longNumber);
             }
 
         });
