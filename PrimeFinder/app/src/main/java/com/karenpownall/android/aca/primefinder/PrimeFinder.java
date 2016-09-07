@@ -46,7 +46,7 @@ public class PrimeFinder implements Runnable{
         double root = Math.sqrt(checkNumber); //square root
 
         for (int i = 2; i <= root; i++) {
-            if (checkNumber % i == 0) {//number passed in evenly divisible by i, returns boolean
+            if (checkNumber % i == 0) { //number passed in evenly divisible by i, returns boolean
                 return false;
             }
         }
