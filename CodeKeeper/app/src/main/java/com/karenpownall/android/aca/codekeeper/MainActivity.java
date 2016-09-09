@@ -17,7 +17,7 @@ import java.util.Iterator;
 public class MainActivity extends AppCompatActivity {
 
     private Button mAddButton;
-    private TextView mUserInput;
+    private EditText mUserInput;
     private TextView mResultText;
 
     @Override
