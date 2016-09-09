@@ -14,12 +14,12 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mComixButton;
-    private TextView mOutputText;
-    private EditText mBasePrice;
-    private EditText mConditionText;
-    private EditText mIssueText;
-    private EditText mTitleText;
+    public Button mComixButton;
+    public TextView mOutputText;
+    public EditText mBasePrice;
+    public EditText mConditionText;
+    public EditText mIssueText;
+    public EditText mTitleText;
     public HashMap quality = new HashMap();
 
     @Override
