@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //change text on the button
                     btnHide.setText("HIDE");
                 }
-                break;
+            break;
 
         }
     }
