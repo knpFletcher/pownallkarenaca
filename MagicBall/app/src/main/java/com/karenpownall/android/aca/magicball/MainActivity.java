@@ -3,7 +3,6 @@ package com.karenpownall.android.aca.magicball;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         mMagicText = (TextView) findViewById(R.id.magicText);
         //throwing to the same textView
@@ -48,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /* Don't think I need this for this app
+    /* Simplifying
+    Don't think I need this for this app
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

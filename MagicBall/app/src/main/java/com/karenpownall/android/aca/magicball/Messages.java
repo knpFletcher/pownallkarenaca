@@ -36,5 +36,4 @@ public class Messages {
 
         return message;
     }
-
 }
