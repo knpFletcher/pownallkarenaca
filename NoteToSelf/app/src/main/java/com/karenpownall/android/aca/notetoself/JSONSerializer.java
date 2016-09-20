@@ -43,6 +43,7 @@ public class JSONSerializer {
             OutputStream out = mContext.openFileOutput
                     (mFileName, mContext.MODE_PRIVATE);
             writer = new OutputStreamWriter(out);
+            writer.write(jArray.toString());
         } finally {
             if (writer != null){
                 writer.close();
@@ -62,6 +63,7 @@ public class JSONSerializer {
             while ((line = reader.readLine()) != null) {
                 jsonString.append(line);
             }
+
             JSONArray jArray = (JSONArray) new JSONTokener
                     (jsonString.toString()).nextValue();
             for (int i = 0; i < jArray.length(); i++) {

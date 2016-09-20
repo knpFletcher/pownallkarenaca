@@ -23,24 +23,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    Animation mAnimFlash;
-    Animation mFadeIn;
+
     private NoteAdapter mNoteAdapter;
     private boolean mSound;
     private int mAnimOption;
     private SharedPreferences mPrefs;
+    Animation mAnimFlash;
+    Animation mFadeIn;
 
+    //region overridden methods
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogNewNote dialog = new DialogNewNote();
+                dialog.show(getSupportFragmentManager(), "");
+            }
+        });
+        */
+
+        /*
+        1. Initialize mNoteAdapter
+        2. Get a reference to ListView
+        3. Bind them together
+         */
 
         mNoteAdapter = new NoteAdapter();
         ListView listNote = (ListView) findViewById(R.id.listView);
         listNote.setAdapter(mNoteAdapter);
 
         //Handle clicks on the ListView
-        listNote.setOnItemClickListener(new AdapterView.OnItemClickListener(){ //inner annonymous class
+        listNote.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            //inner anonymous class
             @Override
             public void onItemClick(AdapterView<?>adapter, View view, int whichItem, long id){
                 /*
@@ -52,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Create a new dialog window
                 DialogShowNote dialog = new DialogShowNote();
-                //Send in a reference to teh note to be shown
+                //Send in a reference to the note to be shown
                 dialog.sendNoteSelected(tempNote);
 
                 //show the dialog window with the note in it
@@ -61,9 +84,34 @@ public class MainActivity extends AppCompatActivity {
         });
     } //end of onCreate
 
-    public void createNewNote(Note n) {
-        mNoteAdapter.addNote(n);
-    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    } //end of OnCreateOptionsMenu()
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_add) {
+            DialogNewNote dialog = new DialogNewNote();
+            dialog.show(getFragmentManager(), "456");
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    } // end of onOptionsItemSelected()
 
     @Override
     protected void onResume(){
@@ -96,63 +144,73 @@ public class MainActivity extends AppCompatActivity {
         mNoteAdapter.saveNotes();
     }
 
+    // endregion overridden methods
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    // region class methods
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    /*
+    When DialogNewNote calls this method, it will pass it straight to
+    the addNote method in the NoteAdapter class, and will be added to
+    ArrayList (noteList). The adapter will be notified of the change as
+    well, which will then trigger the BaseAdapter class to do its work and
+    keep the view up-to-date.
+     */
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, SettingsActivity.class);
-            startActivity(intent);
-            return true;
-        }
+    public void createNewNote(Note n) {
+        mNoteAdapter.addNote(n);
+    } // end of createNewNote()
+    // end region class methods
 
-        if (id == R.id.action_add) {
-            DialogNewNote dialog = new DialogNewNote();
-            dialog.show(getFragmentManager(), "456");
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    //region inner classes
+    /*
+    Here we create an inner class called NoteAdapter that extends
+    BaseAdapter. This class holds an ArrayList called noteList and the
+    getItem method returns a Note object.
+     */
 
-    //inner class
     public class NoteAdapter extends BaseAdapter{
         private JSONSerializer mSerializer;
+
+        // Declare and initialize a List that will hold notes
         List<Note> noteList = new ArrayList<Note>();
 
         public NoteAdapter(){
-            mSerializer = new JSONSerializer("NoteToSelf.json", MainActivity.this.getApplicationContext());
+            mSerializer = new JSONSerializer("NoteToSelf.json",
+                    MainActivity.this.getApplicationContext());
+            mSerializer = new JSONSerializer("NoteToSelf.json",
+                    MainActivity.this.getApplicationContext());
             try {
                 noteList = mSerializer.load();
             } catch (Exception e){
                 noteList = new ArrayList<Note>();
                 Log.e("Error loading notes: ", "", e);
-            }
-        }
+            } //end try catch
+        } //end constructor
 
+        // Get the number of notes in the list (ArrayList)
         @Override
         public int getCount(){
             return noteList.size();
         }
+
+        // Get an item at a particular index (whichItem) in the array
         @Override
         public Note getItem(int whichItem){
             return noteList.get(whichItem);
         }
+
+        // Get the id of an item in the array
         @Override
         public long getItemId(int whichItem){
             return whichItem;
         }
+
+        /*
+        The view object reference is an instance of the list item that is
+        necessary to be displayed as evaluated by BaseAdapter, and whichItem is
+        the position in the ArrayList of the Note object that needs to be
+        displayed in it.
+         */
         @Override
         public View getView(int whichItem, View view, ViewGroup viewGroup){
             //implement this method next
@@ -160,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             if (view == null){
                 //If not, do so here
                 //first create a LayoutInflater
-                LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 //Now instantiate view using inflater.inflate
                 //using the listitem layout
                 view = inflater.inflate(R.layout.listitem, viewGroup, false);
@@ -172,9 +230,9 @@ public class MainActivity extends AppCompatActivity {
             TextView txtDescription = (TextView) view.findViewById(R.id.txtDescription);
             ImageView ivImportant = (ImageView) view.findViewById(R.id.imageViewImportant);
             ImageView ivTodo = (ImageView) view.findViewById(R.id.imageViewTodo);
-            ImageView ivIdea = (ImageView) view.findViewById(R.id.imageViewData);
+            ImageView ivIdea = (ImageView) view.findViewById(R.id.imageViewIdea);
 
-            //hide image view widges that aren't relevant
+            //hide imageView widges that aren't relevant
             Note tempNote = noteList.get(whichItem);
 
             // To animate or not to animate
@@ -201,6 +259,13 @@ public class MainActivity extends AppCompatActivity {
             return view;
         } //end of View getView
 
+         /*
+        This method adds a new note to our array list.
+        notifyDataSetChanged() will tell NoteAdapter that the data in
+        noteList has changed and that the ListView might need to be
+        updated.
+         */
+
         public void addNote(Note n){
             noteList.add(n);
             notifyDataSetChanged();
@@ -212,7 +277,9 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e){
                 Log.e("Error Saving Notes", "", e);
             }
-        } //end of saveNote
-    } //end of NoteAdapter inner class
+        } //end of saveNotes()
+    } //end of NoteAdapter.class
 
-} //end of Main Activity
+    //endregion inner classes
+
+} //end of MainActivity.class

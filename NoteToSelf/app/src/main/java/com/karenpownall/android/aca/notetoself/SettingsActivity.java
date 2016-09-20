@@ -31,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
         mEditor = mPrefs.edit();
         mSound = mPrefs.getBoolean("sound", true); //check boolean 1st
 
-        final CheckBox checkBoxSound = (CheckBox) findViewById(R.id.checkBoxSound);
+        CheckBox checkBoxSound = (CheckBox) findViewById(R.id.checkBoxSound);
 
         if (mSound){
             checkBoxSound.setChecked(true); //set as checked
@@ -49,8 +49,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                 //if mSound is true, make it false
                 //if mSound is false, make it true
-
-                mSound = !mSound;
+                mSound = ! mSound;
                 mEditor.putBoolean("sound", mSound);
             }
         });

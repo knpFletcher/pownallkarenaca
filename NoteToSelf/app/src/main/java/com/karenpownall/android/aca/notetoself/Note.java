@@ -8,16 +8,18 @@ import org.json.JSONObject;
  */
 public class Note {
 
-    private String mTitle;
-    private String mDescription;
-    private boolean mIdea;
-    private boolean mTodo;
-    private boolean mImportant;
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESCRIPTION = "description";
     private static final String JSON_IDEA = "idea";
     private static final String JSON_TODO = "todo";
     private static final String JSON_IMPORTANT = "important";
+
+    private String mTitle;
+    private String mDescription;
+    private boolean mIdea;
+    private boolean mTodo;
+    private boolean mImportant;
+
 
     //Constructor (s go on top of class, best practice)
     //only used when new is called with JSONObject
@@ -41,40 +43,40 @@ public class Note {
         return mTitle;
     }
 
-    public void setTitle(String mTitle) {
-        this.mTitle = mTitle;
+    public void setTitle(String title) {
+        mTitle = title;
     }
 
     public String getDescription() {
         return mDescription;
     }
 
-    public void setDescription(String mDescription) {
-        this.mDescription = mDescription;
+    public void setDescription(String description) {
+        mDescription = description;
     }
 
     public boolean isIdea() {
         return mIdea;
     }
 
-    public void setIdea(boolean mIdea) {
-        this.mIdea = mIdea;
+    public void setIdea(boolean idea) {
+        mIdea = idea;
     }
 
     public boolean isTodo() {
         return mTodo;
     }
 
-    public void setTodo(boolean mTodo) {
-        this.mTodo = mTodo;
+    public void setTodo(boolean todo) {
+        mTodo = todo;
     }
 
     public boolean isImportant() {
         return mImportant;
     }
 
-    public void setImportant(boolean mImportant) {
-        this.mImportant = mImportant;
+    public void setImportant(boolean important) {
+        mImportant = important;
     }
 
     public JSONObject convertToJSON() throws JSONException{

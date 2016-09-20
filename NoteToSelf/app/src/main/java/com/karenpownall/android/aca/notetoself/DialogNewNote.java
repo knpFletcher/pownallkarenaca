@@ -16,10 +16,26 @@ import android.widget.EditText;
 public class DialogNewNote extends DialogFragment{
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+        // Declare and initialize an AlertDialog.Builder object
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        /*
+        Initialize a LayoutInflater object, which we'll use to inflate our
+        XML layout. (Turn our XML Layout into a Java Object.)
+        inflater.inflate basically replaces setContentView for our dialog
+        Then we create and inflate a new View, which will then contain all the
+        UI elements from our dialog_new_note.xml layout file.
+        */
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_new_note, null);
+
+        /*
+        Here we get references to each of the UI widgets in our layout.  Many of
+        the objects are declared final because they will be used in an anonymous
+        class. This is required.
+         */
 
         final EditText editTitle = (EditText) dialogView.findViewById(R.id.editTitle);
         final EditText editDescription = (EditText) dialogView.findViewById(R.id.editDescription);
@@ -28,6 +44,13 @@ public class DialogNewNote extends DialogFragment{
         final CheckBox checkBoxImportant = (CheckBox) dialogView.findViewById(R.id.checkBoxImportant);
         Button btnCancel = (Button) dialogView.findViewById(R.id.btnCancel);
         Button btnOK = (Button) dialogView.findViewById(R.id.btnOK);
+
+        /*
+        Now we set the message of the dialog using builder. Then we write an
+        anonymous class to handle clicks on btnCancel. In the overridden onClick
+        method, we simply call dismiss(), which is a public method of DialogFragment,
+        to close the dialog window.
+         */
 
         builder.setView(dialogView).setMessage("Add a new note");
 
@@ -38,6 +61,11 @@ public class DialogNewNote extends DialogFragment{
                 dismiss();
             }
         });
+
+        /*
+        Now we add an anonymous class to handle what happens when the user clicks on
+        the OK button (btnOK)
+         */
 
         //Handle OK button
         btnOK.setOnClickListener(new View.OnClickListener() {
