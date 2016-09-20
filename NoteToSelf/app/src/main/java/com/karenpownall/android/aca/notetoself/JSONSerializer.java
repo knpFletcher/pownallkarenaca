@@ -48,7 +48,7 @@ public class JSONSerializer {
                 writer.close();
             }
         }
-    }
+    } //end of save
 
     public ArrayList<Note> load() throws IOException, JSONException {
         ArrayList<Note> noteList = new ArrayList<Note>();
@@ -75,6 +75,6 @@ public class JSONSerializer {
                 reader.close();
         }
         return noteList;
-    }
+    } //end of ArrayList
 
 } //end of class

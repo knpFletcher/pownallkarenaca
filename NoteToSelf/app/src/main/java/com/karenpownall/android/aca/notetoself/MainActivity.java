@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -21,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    Animation mAnimFlash;
+    Animation mFadeIn;
     private NoteAdapter mNoteAdapter;
     private boolean mSound;
     private int mAnimOption;
@@ -55,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show(getFragmentManager(), "");
             }
         });
-    }
+    } //end of onCreate
 
     public void createNewNote(Note n) {
         mNoteAdapter.addNote(n);
@@ -68,7 +72,23 @@ public class MainActivity extends AppCompatActivity {
         mPrefs = getSharedPreferences("Note to Self", MODE_PRIVATE);
         mSound = mPrefs.getBoolean("sound", true);
         mAnimOption = mPrefs.getInt("anim option", SettingsActivity.FAST);
-    }
+
+        mAnimFlash = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.flash);
+        mFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+        // Set the rate of flash based on settings
+        if(mAnimOption == SettingsActivity.FAST){
+
+            mAnimFlash.setDuration(100);
+            Log.i("anim = ",""+ mAnimOption);
+        }else if(mAnimOption == SettingsActivity.SLOW){
+
+            Log.i("anim = ",""+ mAnimOption);
+            mAnimFlash.setDuration(1000);
+        }
+
+        mNoteAdapter.notifyDataSetChanged();
+    } //end of onResume
 
     @Override
     protected void onPause(){
@@ -103,8 +123,6 @@ public class MainActivity extends AppCompatActivity {
             dialog.show(getFragmentManager(), "456");
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -159,6 +177,14 @@ public class MainActivity extends AppCompatActivity {
             //hide image view widges that aren't relevant
             Note tempNote = noteList.get(whichItem);
 
+            // To animate or not to animate
+            if (tempNote.isImportant() && mAnimOption != SettingsActivity.NONE ) {
+                view.setAnimation(mAnimFlash);
+
+            }else{
+                view.setAnimation(mFadeIn);
+            }
+
             if (!tempNote.isImportant()){
                 ivImportant.setVisibility(View.GONE);
             }
@@ -173,11 +199,12 @@ public class MainActivity extends AppCompatActivity {
             txtTitle.setText(tempNote.getTitle());
             txtDescription.setText(tempNote.getDescription());
             return view;
-        }
+        } //end of View getView
+
         public void addNote(Note n){
             noteList.add(n);
             notifyDataSetChanged();
-        }
+        } //end of addNote
 
         public void saveNotes(){
             try{
@@ -185,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e){
                 Log.e("Error Saving Notes", "", e);
             }
-        }
-    } //end of NoteAdapter
+        } //end of saveNote
+    } //end of NoteAdapter inner class
 
 } //end of Main Activity
