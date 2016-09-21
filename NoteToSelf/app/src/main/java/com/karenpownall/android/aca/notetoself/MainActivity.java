@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     Animation mFadeIn;
 
     int mIdBeep = -1;
-    SoundPool mSp  ;
+    SoundPool mSp;
 
     //region overridden methods
     @Override
