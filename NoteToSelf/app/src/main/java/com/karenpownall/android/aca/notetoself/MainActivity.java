@@ -3,6 +3,12 @@ package com.karenpownall.android.aca.notetoself;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -19,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,11 +38,43 @@ public class MainActivity extends AppCompatActivity {
     Animation mAnimFlash;
     Animation mFadeIn;
 
+    int mIdBeep = -1;
+    SoundPool mSp  ;
+
     //region overridden methods
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Instantiate sound pool
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build();
+
+            mSp = new SoundPool.Builder()
+                    .setMaxStreams(5)
+                    .setAudioAttributes(audioAttributes)
+                    .build();
+        } else {
+            mSp = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
+        }
+
+        try {
+            //Create objects of the 2 required classes
+            AssetManager assetManager = this.getAssets();
+            AssetFileDescriptor descriptor;
+
+            //Load our FX in memory for use
+            descriptor = assetManager.openFd("beep.ogg");
+            mIdBeep = mSp.load(descriptor, 0);
+        } catch (IOException e) {
+            //Print an error message to the console
+        }
+        Log.e("error", "failed to load sound files");
+
 
         /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -61,11 +100,29 @@ public class MainActivity extends AppCompatActivity {
         ListView listNote = (ListView) findViewById(R.id.listView);
         listNote.setAdapter(mNoteAdapter);
 
+        //so we can long click it
+        listNote.setLongClickable(true);
+
+        //now to detect long clicks and delete the note
+        listNote.setOnItemLongClickListener(new
+            AdapterView.OnItemLongClickListener(){
+
+            public boolean onItemLongClick(AdapterView<?> adapter, View view,
+                                           int whichItem, long id){
+                //ask NoteAdapter to delete this entry
+                mNoteAdapter.deleteNote(whichItem);
+                return true;
+            }
+        });
+
         //Handle clicks on the ListView
         listNote.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             //inner anonymous class
             @Override
             public void onItemClick(AdapterView<?>adapter, View view, int whichItem, long id){
+                if (mSound){
+                    mSp.play(mIdBeep, 1, 1, 0, 0, 1);
+                }
                 /*
                 Create a temporary Note
                 which is a reference to the Note
@@ -81,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 //show the dialog window with the note in it
                 dialog.show(getFragmentManager(), "");
             }
-        });
+        }); //end OnItemClickLIstener
     } //end of onCreate
 
     @Override
@@ -278,6 +335,11 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("Error Saving Notes", "", e);
             }
         } //end of saveNotes()
+
+        public void deleteNote(int n){
+            noteList.remove(n);
+            notifyDataSetChanged();
+        }
     } //end of NoteAdapter.class
 
     //endregion inner classes
