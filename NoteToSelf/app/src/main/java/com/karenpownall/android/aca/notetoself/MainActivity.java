@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 //show the dialog window with the note in it
                 dialog.show(getFragmentManager(), "");
             }
-        }); //end OnItemClickLIstener
+        }); //end OnItemClickListener
     } //end of onCreate
 
     @Override
@@ -289,17 +289,15 @@ public class MainActivity extends AppCompatActivity {
             ImageView ivTodo = (ImageView) view.findViewById(R.id.imageViewTodo);
             ImageView ivIdea = (ImageView) view.findViewById(R.id.imageViewIdea);
 
-            //hide imageView widges that aren't relevant
+            //hide imageView widgets that aren't relevant
             Note tempNote = noteList.get(whichItem);
 
             // To animate or not to animate
             if (tempNote.isImportant() && mAnimOption != SettingsActivity.NONE ) {
                 view.setAnimation(mAnimFlash);
-
             }else{
                 view.setAnimation(mFadeIn);
             }
-
             if (!tempNote.isImportant()){
                 ivImportant.setVisibility(View.GONE);
             }

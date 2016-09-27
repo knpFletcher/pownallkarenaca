@@ -1,0 +1,7 @@
+#Mon Sep 26 09:43:44 CDT 2016
+base.0=/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a09fbdd921a9cce4ad9a1e81a84daf5292f77c7e
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c0e9c51fa6779be78d069716cf39578031ad0fd7/classes.dex
+base.1=/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c0e9c51fa6779be78d069716cf39578031ad0fd7
+file.0=/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a09fbdd921a9cce4ad9a1e81a84daf5292f77c7e/classes.dex

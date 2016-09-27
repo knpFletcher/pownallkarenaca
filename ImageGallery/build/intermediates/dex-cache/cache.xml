@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_5a3d61253e9cc964d8a77d058ffaa0a7268ff5d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_559786b76ba8cf50b03b11788af3d020333c18b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3f8209f6271e8d3e18d43fd7f6deb2d159f13fc6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_3f298b656235ba9eee027dbc33c67da64ceb799f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_5039824de8c5ce701f0f91fab8e1f0f3047302fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_566b7a335c1fa5d7393ac2c66c4bff7d1fc2fc79/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_9007478858080b295914eed91b2c0acdc3447480/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_06aeed26b1877c77e6324a621485f4e37d20096b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_47c07cf9ddb76b35705c68bf96a0059ff4a1d3f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_83df3fcbb40178f2c508df2270fda97c0e5af645/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_e869407a58a147543fe2729e3e6efc38c0ae5ed8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_53581e3dd5b8df0742b3c39581acd5eb012e4d59/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1658d144fbd8d44ebc6378bc0f6f40b05b88ca2c">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c0e9c51fa6779be78d069716cf39578031ad0fd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_0e1f5ed2efb77c5438a07846c19828978dd4d5db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_d3624a8a19e5ec72e339e006413e7da6479009c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_38dcabdc29b35340af1c6ac8418c1ef79355639e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8d8eeae7c2023efc44f8b2ede781b66fe63af364">
+        <dex dex="/Users/kkpwnall/Desktop/Treehouse/ImageGallery/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a09fbdd921a9cce4ad9a1e81a84daf5292f77c7e/classes.dex" />
+    </item>
+
+</items>

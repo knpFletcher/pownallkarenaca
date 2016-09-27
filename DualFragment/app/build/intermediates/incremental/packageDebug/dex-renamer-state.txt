@@ -1,0 +1,7 @@
+#Fri Sep 23 13:54:08 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ee92cae0eb4353ed738ca121cb4e1dc141863fef
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c4f52fc2979ea06b0193f7ffa630526f9ed8f784/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c4f52fc2979ea06b0193f7ffa630526f9ed8f784
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ee92cae0eb4353ed738ca121cb4e1dc141863fef/classes.dex

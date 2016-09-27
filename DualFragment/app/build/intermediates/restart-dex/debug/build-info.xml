@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="23"
+    density="420dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="407614520694945"
+    token="744828192177070797"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="407" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="39" />
+    <task
+        name="verifier"
+        duration="13" />
+
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="407422490292890"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="407614520694945"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/DualFragment/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

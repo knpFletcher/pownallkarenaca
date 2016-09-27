@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.0_7c77628d6f93e94b323aad9b589d28a91428beb0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_3dfd3af3832bad16839e05e7e514633d6fbdb966/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_a87608cdcbc599df9b0fe1ce03cbee76da9a449c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_74ebb59700c6d4119742cf349708c57c31deb3e6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_203975a0449853f6540cf4091bcfd393017c0f75/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_bef1bc28cce48043feb946aa75d446df44387b90/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_ce0893a25d3ecfd8f4cc64ced5f564b13c99088a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="9e335cdce91bf20b7461e2822b98edbc268ff657">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9fc090c40bae8a3122f6c940d5376823fe8afd91/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c29ac0417ed929c254c6fe2898921de9f7866197">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c84bc2adc84db13099764165a92e89ef03a99eb7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_ffdb6a353d1c032fb63166bf406695ad0d911a2a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.0_7c37daff0b1cc6ef056aeebf55fda1200ab2018a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.0_f2d287d312b500f3d5fd248410d2f8ce2aa1fc6c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_4c4b0ea6e72e32ec5875c69a81ba56f9bfc7daa2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_67be0e62a6109383d2cf4e955458a944611b7cb8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_90e1256351ef52a27d039abc8a63ee5d85ea4ceb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_a5f86e864c974142943602791e29623618517af9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_e20062f7f367e66f99797f4e049d7bff56c8b33a/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_dc2ca2844424a63c4c3e6e2bb20d03b85ac7b6be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_2e5eb9ca9d822fa33abf222f299a3ec6398183ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_0b517966b81e15fdef7f51f725d5ca4eb589adb4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_9007478858080b295914eed91b2c0acdc3447480/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_bdb363411eba11c9697f1e710e579042fe845717/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_a01e14e7cfb409a56406d0122ed752f44369ded6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_dc10eb50e28af4d4a9c3119b0e4be4888d6826ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9a507332ddca68b025e66759fde72e39213a285c">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_775cfe18955ff2f414320621dc2ad8ea50e8447a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="75f8bd4b9166bead945505d0b3c72bcb1c9044e6">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1322456a3017ac730563ad5092fdc638a610542c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_63d366333b8be135af5f4ecbe2a4fbb376e2fa15/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_ff7739fbdac1349831bf130f1f58d21215c27ccc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_06e9b8eeeb526464ffd2f34b543f6811f76b6479/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_cff607f0e212e05d60cb61435ec2052e0ad4785b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_0342e1027cda42a93c3877170cc5172f0d53b7ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f1aad4bfb530da8a52d1292a2a3613eb4b63264a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_b9caf4dd62c5da972d9ef0ec72a27af0d6216e30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_fc4239348202f35ae40907189ba4fc2bd1dd63bc/classes.dex" />
+    </item>
+
+</items>

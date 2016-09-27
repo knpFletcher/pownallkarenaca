@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="23"
+    density="420dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="429519207536512"
+    token="5560597311449782220"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+
+    <build
+        timestamp="429446085311459"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="429519207536512"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+
+</instant-run>

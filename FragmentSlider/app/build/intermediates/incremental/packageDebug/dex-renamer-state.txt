@@ -1,0 +1,7 @@
+#Mon Sep 26 10:30:58 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2da0bd1f604c26a30163762957b10f12fd3c0ad8
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_65dca52aea19619766a6a82c49f223caced85f48/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_65dca52aea19619766a6a82c49f223caced85f48
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/FragmentSlider/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2da0bd1f604c26a30163762957b10f12fd3c0ad8/classes.dex

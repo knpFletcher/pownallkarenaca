@@ -1,19 +1,41 @@
 package com.karenpownall.android.aca.notetoself;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
-/**
- * Created by kkpwnall on 9/15/16.
- */
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class DialogNewNote extends DialogFragment{
+
+    //camera functionality
+    private static final int CAMERA_REQUEST = 123;
+    private ImageView mPicTake;
+    private ImageButton mBtnPhoto;
+    //file path for photo
+    private String mCurrentPhotoPath;
+    //where photo is stored
+    private Uri mImageUri = Uri.EMPTY;
+    Note newNote = new Note();
+
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -30,6 +52,34 @@ public class DialogNewNote extends DialogFragment{
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_new_note, null);
+
+        //camera functionality
+        //uses code from slides Android Lesson 14
+        mPicTake = (ImageView) dialogView.findViewById(R.id.picTake);
+        mBtnPhoto = (ImageButton) dialogView.findViewById(R.id.btnPhoto);
+        //mBtnPhoto = (Button) dialogView.findViewById(R.id.btnPhoto);
+
+        mBtnPhoto.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                File photoFile = null;
+                try {
+                    photoFile = createImageFile();
+                }catch (IOException ex){
+                    //error occurred creating file
+                    Log.e("error", "error creating file");
+                }
+
+                //continue only if file was created successfully
+                if (photoFile != null){
+                    mImageUri = Uri.fromFile(photoFile);
+                    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                            Uri.fromFile(photoFile));
+                    startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                }
+            }
+        });
 
         /*
         Here we get references to each of the UI widgets in our layout.  Many of
@@ -72,9 +122,6 @@ public class DialogNewNote extends DialogFragment{
             @Override
             public void onClick(View v) {
 
-                //Create a new note
-                Note newNote = new Note();
-
                 //Set its variables to match the users entries on the form
                 newNote.setTitle(editTitle.getText().toString());
                 newNote.setDescription(editDescription.getText().toString());
@@ -90,10 +137,56 @@ public class DialogNewNote extends DialogFragment{
 
                 //Quit the dialog
                 dismiss();
-
             }
         });
 
         return builder.create();
     }
+
+    //camera/photo functionality
+    private File createImageFile() throws IOException {
+        //create an image file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd__HHmmss").format(new Date());
+        String imageFileName = "JPEG_ " + timeStamp + "_";
+        File storageDir = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES);
+        File image = File.createTempFile(
+                imageFileName,
+                ".jpg",
+                storageDir
+        );
+        mCurrentPhotoPath = "file: " + image.getAbsolutePath();
+        return image;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            //Bitmap photo = (Bitmap)data.getExtras().get("data");
+            //newNote.setPicture(photo);
+            try {
+                newNote.setPicture(Uri.parse(mImageUri.toString()));
+                mPicTake.setImageURI(Uri.parse(mImageUri.toString()));
+            } catch (Exception e) {
+                Log.e("Error", "Uri not set");
+            }
+        }else {
+            mImageUri = Uri.EMPTY;
+        }
+    }
+
+    /*
+    causes Null Pointer Exception
+    really necessary here?
+    doesn't work in DialogShowNote either
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        BitmapDrawable bd = (BitmapDrawable) mPicTake.getDrawable();
+        bd.getBitmap().recycle();
+        mPicTake.setImageBitmap(null);
+    }
+    */
 }

@@ -10,13 +10,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by kkpwnall on 9/15/16.
- */
-public class DialogShowNote extends DialogFragment {
+import static com.karenpownall.android.aca.notetoself.R.id.picShow;
+
+public class DialogShowNote extends DialogFragment{
 
     //member variables
     private Note mNote;
+
+    //display picture taken in DialogNewNote
+    //pass it in?
+    private ImageView mPicShow;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
@@ -38,6 +41,17 @@ public class DialogShowNote extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_show_note, null);
 
+
+
+        //TODO display picture taken
+        //pass in bitmap?
+        ImageView mPicShow = (ImageView) dialogView.findViewById(picShow);
+
+        //add picture - call setImageBitmap on imageView, passing in getter
+        mPicShow.setImageURI(mNote.getPicture());
+
+
+
         //3.
         TextView txtTitle = (TextView) dialogView.findViewById(R.id.txtTitle);
         TextView txtDescription = (TextView) dialogView.findViewById(R.id.txtDescription);
@@ -48,6 +62,7 @@ public class DialogShowNote extends DialogFragment {
         ImageView ivImportant = (ImageView) dialogView.findViewById(R.id.imageViewImportant);
         ImageView ivTodo = (ImageView) dialogView.findViewById(R.id.imageViewTodo);
         ImageView ivIdea = (ImageView) dialogView.findViewById(R.id.imageViewIdea);
+
 
         /*
         This code checks whether the note being shown is important and then shows

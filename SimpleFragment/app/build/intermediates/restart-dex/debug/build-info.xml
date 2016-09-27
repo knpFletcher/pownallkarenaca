@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="24"
+    density="560dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="377249381475748"
+    token="-367236321111926753"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="739" />
+    <task
+        name="instant-run-dex"
+        duration="128" />
+    <task
+        name="instant-run-transform"
+        duration="110" />
+    <task
+        name="verifier"
+        duration="22" />
+
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="376980863267228"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="377249381475748"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>

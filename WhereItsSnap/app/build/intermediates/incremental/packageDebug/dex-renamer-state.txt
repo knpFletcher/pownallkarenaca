@@ -1,0 +1,7 @@
+#Tue Sep 27 10:14:48 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ac2493907bdb84629acd12b0f0b63ed9f21eae5c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0022ff8600adfe67e28be9d44403fb8409de9643/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0022ff8600adfe67e28be9d44403fb8409de9643
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ac2493907bdb84629acd12b0f0b63ed9f21eae5c/classes.dex

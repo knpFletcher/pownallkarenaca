@@ -1,0 +1,7 @@
+#Thu Sep 22 13:16:53 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_61f64140c8d615e30793325e99f59a4c4d4e1a57
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d46437522e2de70fa36833767cb6403d2ef37edd/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d46437522e2de70fa36833767cb6403d2ef37edd
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/SimpleFragment/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_61f64140c8d615e30793325e99f59a4c4d4e1a57/classes.dex

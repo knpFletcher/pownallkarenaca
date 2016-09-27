@@ -1,0 +1,7 @@
+#Tue Sep 27 09:38:23 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_775cfe18955ff2f414320621dc2ad8ea50e8447a
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1322456a3017ac730563ad5092fdc638a610542c/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1322456a3017ac730563ad5092fdc638a610542c
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_775cfe18955ff2f414320621dc2ad8ea50e8447a/classes.dex

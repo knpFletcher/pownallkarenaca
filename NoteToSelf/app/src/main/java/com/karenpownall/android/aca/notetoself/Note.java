@@ -1,12 +1,14 @@
 package com.karenpownall.android.aca.notetoself;
 
+import android.net.Uri;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by kkpwnall on 9/15/16.
- */
 public class Note {
+
+    //modify to store image, like saving string for title and description
+    //bitmap - saving actual object, not widget
 
     private static final String JSON_TITLE = "title";
     private static final String JSON_DESCRIPTION = "description";
@@ -19,6 +21,7 @@ public class Note {
     private boolean mIdea;
     private boolean mTodo;
     private boolean mImportant;
+    private Uri mPicture;
 
 
     //Constructor (s go on top of class, best practice)
@@ -37,7 +40,14 @@ public class Note {
     public Note (){
     }
 
+    public Uri getPicture() {
+        return mPicture;
+    }
 
+    //setting data inside note object
+    public void setPicture(Uri picture) {
+        mPicture = picture;
+    }
 
     public String getTitle() {
         return mTitle;

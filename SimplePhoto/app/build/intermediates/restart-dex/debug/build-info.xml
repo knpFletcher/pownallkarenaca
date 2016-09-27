@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="24"
+    density="560dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="455167050169738"
+    token="2946157912985657531"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="748" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="397" />
+    <task
+        name="verifier"
+        duration="59" />
+
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="455167050169738"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/SimplePhoto/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

@@ -1,0 +1,7 @@
+#Thu Sep 22 16:42:56 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/Hangman/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_764c8b49f4522a576a5dc41e22dfd3516bc88cb0
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/Hangman/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c145196fe1d00e53bcd2d4e05af8093b1aaa7df9/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/Hangman/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c145196fe1d00e53bcd2d4e05af8093b1aaa7df9
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/Hangman/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_764c8b49f4522a576a5dc41e22dfd3516bc88cb0/classes.dex
