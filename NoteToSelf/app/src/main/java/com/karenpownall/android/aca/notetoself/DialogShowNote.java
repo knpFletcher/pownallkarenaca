@@ -44,7 +44,7 @@ public class DialogShowNote extends DialogFragment{
 
 
         //TODO display picture taken
-        //pass in bitmap?
+        //pass in URI?
         ImageView mPicShow = (ImageView) dialogView.findViewById(picShow);
 
         //add picture - call setImageBitmap on imageView, passing in getter
