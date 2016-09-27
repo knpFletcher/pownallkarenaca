@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.karenpownall.android.aca.hangman.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/wrongLetters"
+        android:text="@string/wrong"/>
+
+    <!-- EditText
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="1"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_toLeftOf="@+id/editText4"
+        android:layout_toStartOf="@+id/editText4"
+        android:layout_marginRight="50dp"
+        />
+
+    <EditText
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="1"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginRight="50dp"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_toLeftOf="@+id/editText3"
+        android:layout_toStartOf="@+id/editText3"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="1"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_width="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/ -->
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="1"
+        android:ems="10"
+        android:id="@+id/letterText"
+        android:textAllCaps="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/guess_letter"
+        android:layout_width="130dp"/>
+
+    <Button
+        android:text="@string/guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:id="@+id/btnGuess"
+        android:layout_below="@+id/letterText"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rightLetters"
+        android:text="@string/right"
+        android:layout_below="@+id/wrongLetters"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"/>
+
+</RelativeLayout>
