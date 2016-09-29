@@ -1,5 +1,6 @@
 package com.karenpownall.android.aca.whereitssnap;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,6 +32,9 @@ public class CaptureFragment extends Fragment {
 
     //where the captured image is stored
     private Uri mImageUri = Uri.EMPTY;
+
+    //reference to Database
+    private DataManager mDataManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -68,13 +73,54 @@ public class CaptureFragment extends Fragment {
                     startActivityForResult(cameraIntent, CAMERA_REQUEST);
                 }
             }
-        });
+        }); //end of ButtonCapture
+
+        // Listen for clicks on the save button
+        btnSave.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(mImageUri != null){
+                    if(!mImageUri.equals(Uri.EMPTY)) {
+                        // We have a photo to save
+
+                        Photo photo = new Photo();
+                        photo.setTitle(mEditTextTitle.getText().toString());
+                        photo.setStorageLocation(mImageUri);
+
+                        // What is in the tags
+                        String tag1 = mEditTextTag1.getText().toString();
+                        String tag2 = mEditTextTag2.getText().toString();
+                        String tag3 = mEditTextTag3.getText().toString();
+
+                        // Assign the strings to the Photo object
+                        photo.setTag1(tag1);
+                        photo.setTag2(tag2);
+                        photo.setTag3(tag3);
+
+                        // Send the new object to our DataManager
+                        mDataManager.addPhoto(photo);
+                        Toast.makeText(getActivity(), "Saved", Toast.LENGTH_LONG).show();
+                    }else {
+                        // No image
+                        Toast.makeText(getActivity(), "No image to save", Toast.LENGTH_LONG).show();
+                    }
+                }else {
+                    // Uri not initialized
+                    Log.e("Error ", "uri is null");
+                }
+            }
+        }); //end of ButtonSave
+
         return view;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mDataManager = new DataManager(getActivity()
+        .getApplicationContext());
     }
 
     private File createImageFile() throws IOException{
@@ -96,7 +142,7 @@ public class CaptureFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == CAMERA_REQUEST && resultCode == MainActivity.RESULT_OK){
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK){
             try{
                 mImageView.setImageURI(Uri.parse(mImageUri.toString()));
             } catch (Exception e) {
