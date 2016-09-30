@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86_64,x86"
+    api-level="24"
+    density="560dpi"
+    format="7"
+    timestamp="367362138654447"
+    token="-2924763907066944689" >
+
+    <task
+        name="javac"
+        duration="4513" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="777" />
+    <task
+        name="verifier"
+        duration="81" />
+
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="367362138654447" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/DeviceDetection/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

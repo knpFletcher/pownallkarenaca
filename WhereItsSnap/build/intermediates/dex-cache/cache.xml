@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_2ed73ba9453fb73575db841f4bfbf455ffbf41b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d19906e782265473c93b42e6fbf81556b92c320b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="bc07cc9cc6391fca1e5dc2ca9b95816f9282bd5e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ac2493907bdb84629acd12b0f0b63ed9f21eae5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_e760fea19f6572a72ab5483b58060be11d462a43/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="84ebf3ece64a51d7f74af43d58fa05641a81bec7">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0022ff8600adfe67e28be9d44403fb8409de9643/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_6b78f9dc27cdb1634da131a64361405cb366e7c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_65ec5a663565f47ff03395261d5a3a2a75ad03bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_39d20c7436e3a9abd6359b6e2ac49ae941f64ced/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f846a1e0ce6b4d664d4556d3609b20ed66b594b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_91279dce1f632aa0d36ba34c2f57feae6c96fc1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_9007478858080b295914eed91b2c0acdc3447480/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_870f621f284573867ef4feb85b17ce3ad48746cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_2ccf68292232bd5990fd48a296363c3ad54fb25c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_4e4fd200f4380fefeb5b10b79f9745978d42acb0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_4637aeb95b245860099ba32b87270c3f7be4cfe5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_3d60847346e3727497f3b6556c06544d3a18db95/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_90cb06ed5e58b857ef4a37dfdcc982474948d2e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_8f4ee7f7f00b345287bfd62b7e1653003f52b508/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_00fb0d8da6a2150bf63e0f2b27c54b772d224dd8/classes.dex" />
+    </item>
+
+</items>

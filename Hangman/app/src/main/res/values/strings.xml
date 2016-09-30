@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Hangman</string>
-    <string name="wrong">Wrong Letters</string>
-    <string name="guess_letter">Guess A Letter</string>
-    <string name="right">Right Letters</string>
-    <string name="guess">Guess!</string>
-</resources>
