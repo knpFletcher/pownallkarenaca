@@ -1,0 +1,7 @@
+#Fri Sep 30 10:58:17 CDT 2016
+base.0=/Users/kkpwnall/Desktop/pownallkarenaca/WhereInTheWorld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7b4724329c1c352658114671882cb4e5b12a02b1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/pownallkarenaca/WhereInTheWorld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f6ed267fb12404816d7dea97770fd213d6704d38/classes.dex
+base.1=/Users/kkpwnall/Desktop/pownallkarenaca/WhereInTheWorld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f6ed267fb12404816d7dea97770fd213d6704d38
+file.0=/Users/kkpwnall/Desktop/pownallkarenaca/WhereInTheWorld/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7b4724329c1c352658114671882cb4e5b12a02b1/classes.dex

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="24"
+    density="560dpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="9241409542449"
+    token="-6525247459470808056"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="2363" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="657" />
+    <task
+        name="verifier"
+        duration="31" />
+
+    <artifact
+        location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereInTheWorld/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="9241409542449"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereInTheWorld/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
