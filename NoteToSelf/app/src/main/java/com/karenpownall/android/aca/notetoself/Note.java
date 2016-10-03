@@ -15,6 +15,7 @@ public class Note {
     private static final String JSON_IDEA = "idea";
     private static final String JSON_TODO = "todo";
     private static final String JSON_IMPORTANT = "important";
+    private static final String JSON_PICTURE = "picture";
 
     private String mTitle;
     private String mDescription;
@@ -32,6 +33,7 @@ public class Note {
         mIdea = jo.getBoolean(JSON_IDEA);
         mTodo = jo.getBoolean(JSON_TODO);
         mImportant = jo.getBoolean(JSON_IMPORTANT);
+        mPicture = Uri.parse(jo.getString(JSON_PICTURE));
     }
 
     // Now we must provide an empty default constructor
@@ -97,6 +99,7 @@ public class Note {
         jo.put(JSON_IDEA, mIdea);
         jo.put(JSON_TODO, mTodo);
         jo.put(JSON_IMPORTANT, mImportant);
+        jo.put(JSON_PICTURE, mPicture.toString());
 
         return jo;
     }
