@@ -2,5 +2,9 @@
     {
         "merged": "/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/kkpwnall/Desktop/WhereItsSnap/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/kkpwnall/Desktop/WhereItsSnap/app/src/main/res/menu/menu_main.xml"
     }
 ]

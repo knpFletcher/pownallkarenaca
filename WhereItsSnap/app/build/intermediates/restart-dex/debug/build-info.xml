@@ -1,61 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     api-level="23"
-    density="420dpi"
+    density="560dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="517250640457287"
-    token="14849236385976836"
-    verifier="CLASS_ADDED" >
+    timestamp="36978331552143"
+    token="-3430563491771608398"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1576" />
+        duration="751" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="322" />
+        duration="261" />
     <task
         name="verifier"
-        duration="72" />
+        duration="30" />
 
     <artifact
-        location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
-        type="DEX" />
+        location="/Users/kkpwnall/Desktop/WhereItsSnap/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="514672310163410"
+        timestamp="36978331552143"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/outputs/apk/app-debug.apk"
+            location="/Users/kkpwnall/Desktop/WhereItsSnap/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="517250640457287"
-        verifier="CLASS_ADDED" >
-        <artifact
-            location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/kkpwnall/Desktop/pownallkarenaca/WhereItsSnap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
