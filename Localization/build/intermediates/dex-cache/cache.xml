@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_3f1519fab3eed338491c3bba4ddbe2639fe4c816/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_5f18c267d08e959a3040feeb84d5f75e48ce4949/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_dea8abcc8553f4dcadf16eb28e28bc8548b474e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_aa9e2ba37b22edc71e1e06721109820a60e5d674/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_dc979522cfb3732654b7d53bb14bc827cd448715/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_f87d4fa537d8779e0dbadb1a40f3eafb0ac771e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_f7f7c185c5294167a8094ca52a1c024c0ad0a9f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_34f226ac05419ba96868b8cd33e72373e92a3ed5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_9007478858080b295914eed91b2c0acdc3447480/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="501f94fb156814ccb33484c620661c13a50b64b5">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b323bae9bd398b81437c52a1b3e8f901ad14f1ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_cb7765ce121dcf3bdda8d54733f3cefa68a56b2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_85a65bd500a72917317c0322050b1153653031f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5f4be465fecff80d8d6de723d1464efcc9f5786">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3f3160bd18c33881097af348af5af9543dc8933c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_762a190328def7b88a08ecde69250ca4cab3240e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_ca8a1fe1dbac159f79b7aa14e1309dafbf863b52/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_dc1daff88b7615667c71d9c5c200af72eb94a9a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/kkpwnall/Desktop/pownallkarenaca/Localization/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_64f0bb618b071d737969ffe7f27a42ca09ab8ac8/classes.dex" />
+    </item>
+
+</items>
