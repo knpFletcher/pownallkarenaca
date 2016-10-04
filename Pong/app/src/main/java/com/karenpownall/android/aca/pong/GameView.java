@@ -230,19 +230,12 @@ public class GameView extends SurfaceView implements Runnable{
             }
         }
 
-        // Bounce the mBall back when it hits the bottom of screen
-        if(mBall.getRect().bottom > mScreenY){
+        //bounce mBall back when it hits top of screen
+        if (mBall.getRect().top<0){
             mBall.reverseYVelocity();
-            mBall.clearObstacleY(mScreenY - 2);
+            mBall.clearObstacleY(12);
 
-            // Lose a life
-            mLives--;
-            sp.play(loseLifeID, 1, 1, 0, 0, 1);
-
-            if(mLives == 0){
-                mPaused = true;
-                setupAndRestart();
-            }
+            sp.play(beep2ID, 1, 1, 0, 0, 1);
         }
 
         // If the mBall hits left wall bounce
@@ -253,10 +246,10 @@ public class GameView extends SurfaceView implements Runnable{
             sp.play(beep3ID, 1, 1, 0, 0, 1);
         }
 
-        // If the mBall hits left wall bounce
-        if(mBall.getRect().left < 0){
+        //if mBall hits right wall bounce
+        if (mBall.getRect().right>mScreenX){
             mBall.reverseXVelocity();
-            mBall.clearObstacleX(2);
+            mBall.clearObstacleX(mScreenX - 22);
 
             sp.play(beep3ID, 1, 1, 0, 0, 1);
         }

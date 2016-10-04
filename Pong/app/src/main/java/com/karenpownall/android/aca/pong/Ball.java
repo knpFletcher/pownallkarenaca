@@ -38,7 +38,7 @@ public class Ball {
         mRect.left = mRect.left + (mXVelocity / fps);
         mRect.top = mRect.top + (mYVelocity / fps);
         mRect.right = mRect.left + mBallWidth;
-        mRect.bottom = mRect.right - mBallHeight;
+        mRect.bottom = mRect.top - mBallHeight;
     }
 
     //reverse vertical heading
