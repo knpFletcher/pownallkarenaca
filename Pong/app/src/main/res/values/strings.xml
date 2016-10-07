@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pong</string>
+    <string name="title">PONG</string>
+    <string name="play_button">Play</string>
 </resources>

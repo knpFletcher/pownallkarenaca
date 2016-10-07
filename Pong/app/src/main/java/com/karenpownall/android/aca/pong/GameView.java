@@ -150,6 +150,9 @@ public class GameView extends SurfaceView implements Runnable{
 
     } //constructor
 
+
+    //TODO MODIFY TO TAKE USER BACK TO HOMESCREEN
+
     public void setupAndRestart(){
 
         // Put the mBall back to the start
@@ -268,23 +271,27 @@ public class GameView extends SurfaceView implements Runnable{
             mCanvas = mOurHolder.lockCanvas();
 
             // Draw the background color
-            mCanvas.drawColor(Color.argb(255, 26, 128, 182));
+            //mCanvas.drawColor(Color.argb(255, 26, 128, 182));
+            mCanvas.drawColor(Color.argb(225, 38, 38, 38)); //grey
 
             // Choose the brush color for drawing
-            mPaint.setColor(Color.argb(255, 255, 255, 255));
+            //mPaint.setColor(Color.argb(255, 255, 255, 255));
 
             // Draw the mPaddle
+            mPaint.setColor(Color.argb(255, 72, 225, 20)); //green
             mCanvas.drawRect(mPaddle.getRect(), mPaint);
 
             // Draw the mBall
+            mPaint.setColor(Color.argb(255, 72, 225, 20)); //green
             mCanvas.drawRect(mBall.getRect(), mPaint);
 
             // Choose the brush color for drawing
-            mPaint.setColor(Color.argb(255, 255, 255, 255));
+            //mPaint.setColor(Color.argb(255, 255, 255, 255));
 
             // Draw the mScore
-            mPaint.setTextSize(40);
+            mPaint.setTextSize(60);
             mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives, 10, 50, mPaint);
+            mPaint.setColor(Color.argb(255, 223, 242, 255)); //white
 
             // Draw everything to the screen
             mOurHolder.unlockCanvasAndPost(mCanvas);

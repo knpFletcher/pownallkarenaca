@@ -33,7 +33,7 @@ public class Ball {
         return mRect;
     }
 
-    //change positin each frame
+    //change position each frame
     public void update(long fps){
         mRect.left = mRect.left + (mXVelocity / fps);
         mRect.top = mRect.top + (mYVelocity / fps);
