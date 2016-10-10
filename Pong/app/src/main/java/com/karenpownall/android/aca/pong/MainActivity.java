@@ -12,6 +12,7 @@ public class MainActivity extends Activity {
     // and respond to screen touches as well
     GameView gameView;
     DialogHome mDialogHome;
+    //DialogLoser mDialogLoser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

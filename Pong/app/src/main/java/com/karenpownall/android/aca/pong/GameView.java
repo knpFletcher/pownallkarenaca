@@ -71,6 +71,7 @@ public class GameView extends SurfaceView implements Runnable{
     // Lives
     int mLives = 3;
 
+    DialogLoser mDialogLoser;
 
     /*
     When we call new() on gameView
@@ -150,9 +151,6 @@ public class GameView extends SurfaceView implements Runnable{
 
     } //constructor
 
-
-    //TODO MODIFY TO TAKE USER BACK TO HOMESCREEN
-
     public void setupAndRestart(){
 
         // Put the mBall back to the start
@@ -160,10 +158,13 @@ public class GameView extends SurfaceView implements Runnable{
 
         // if game over reset scores and mLives
         if(mLives == 0) {
+
+            DialogLoser mDialogLoser = new DialogLoser();
+            mDialogLoser.show(getFragmentManager(),"");
+
             mScore = 0;
             mLives = 3;
         }
-
     }
 
     @Override
@@ -173,7 +174,6 @@ public class GameView extends SurfaceView implements Runnable{
             // Capture the current time in milliseconds in startFrameTime
             long startFrameTime = System.currentTimeMillis();
 
-            // Update the frame
             // Update the frame
             if(!mPaused){
                 update();
@@ -350,5 +350,6 @@ public class GameView extends SurfaceView implements Runnable{
         }
         return true;
     } //end onTouchEvent
+
 
 } //end GameView class

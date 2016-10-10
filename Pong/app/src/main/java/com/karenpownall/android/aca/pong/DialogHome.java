@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+// I feel like this would be better served as an Intent,
+// but this is what works right now
 public class DialogHome extends DialogFragment{
 
     @Override
@@ -32,11 +35,4 @@ public class DialogHome extends DialogFragment{
         });
         return mBuilder.create();
     }
-
-
-
-
-
-
-
 }
