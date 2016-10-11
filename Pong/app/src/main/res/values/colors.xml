@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="paddle_text">#48FF14</color>
+    <color name="paddle">#00FF0D</color>
     <color name="background">#262626</color>
-    <color name="ball_title">#DFF2FF</color>
+    <color name="ball">#00E6F0</color>
+    <color name="text">#CA00FD</color>
 </resources>

@@ -15,7 +15,7 @@
         android:textSize="100sp"
         android:textAlignment="center"
         android:background="@color/background"
-        android:textColor="@color/ball_title"/>
+        android:textColor="@color/text"/>
 
     <Button
         android:text="@string/play_button"
@@ -23,7 +23,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
         android:background="@color/background"
-        android:textColor="@color/paddle_text"
+        android:textColor="@color/ball"
         android:textSize="20sp"
         android:id="@+id/btnPlay"/>
 </LinearLayout>

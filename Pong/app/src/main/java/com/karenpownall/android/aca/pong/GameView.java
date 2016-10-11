@@ -310,16 +310,16 @@ public class GameView extends SurfaceView implements Runnable{
             mCanvas.drawRect(mPaddle.getRect(), mPaint);
 
             // Draw the mBall
-            mPaint.setColor(Color.argb(255, 72, 225, 20)); //green
+            mPaint.setColor(Color.argb(255, 0, 230, 240)); //blue
             mCanvas.drawRect(mBall.getRect(), mPaint);
 
             // Choose the brush color for drawing
-            //mPaint.setColor(Color.argb(255, 255, 255, 255));
+            mPaint.setColor(Color.argb(255, 202, 0, 253));
 
             // Draw the mScore
             mPaint.setTextSize(60);
             mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives, 10, 50, mPaint);
-            mPaint.setColor(Color.argb(255, 223, 242, 255)); //white
+            mPaint.setColor(Color.argb(255, 202, 0, 253)); //purple
 
             // Draw everything to the screen
             mOurHolder.unlockCanvasAndPost(mCanvas);

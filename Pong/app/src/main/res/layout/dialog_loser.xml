@@ -13,7 +13,7 @@
         android:id="@+id/endText"
         android:textSize="50sp"
         android:textAlignment="center"
-        android:textColor="@color/ball_title"
+        android:textColor="@color/ball"
         android:background="@color/background"/>
 
     <Button
@@ -22,6 +22,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnRestart"
         android:textSize="20sp"
-        android:textColor="@color/paddle_text"
+        android:textColor="@color/paddle"
         android:background="@color/background"/>
 </LinearLayout>
