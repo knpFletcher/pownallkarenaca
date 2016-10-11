@@ -158,10 +158,7 @@ public class GameView extends SurfaceView implements Runnable{
 
         // if game over reset scores and mLives
         if(mLives == 0) {
-
             DialogLoser mDialogLoser = new DialogLoser();
-            mDialogLoser.show(getFragmentManager(),"");
-
             mScore = 0;
             mLives = 3;
         }
