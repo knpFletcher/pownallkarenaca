@@ -1,6 +1,9 @@
 package com.karenpownall.android.aca.pong;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Canvas;
@@ -71,20 +74,23 @@ public class GameView extends SurfaceView implements Runnable{
     // Lives
     int mLives = 3;
 
-    DialogLoser mDialogLoser;
+    Context mContext;
+    MainActivity mMainActivity;
 
     /*
     When we call new() on gameView
     This custom constructor runs
     */
 
-    public GameView(Context context, int x, int y) {
+    public GameView(Context context, int x, int y, MainActivity activity) {
 
      /*
     The next line of code asks the
     SurfaceView class to set up our object.
      */
         super(context);
+        mContext = context;
+        mMainActivity = activity;
 
         // Set the screen width and height
         mScreenX = x;
@@ -158,7 +164,32 @@ public class GameView extends SurfaceView implements Runnable{
 
         // if game over reset scores and mLives
         if(mLives == 0) {
-            DialogLoser mDialogLoser = new DialogLoser();
+
+            mMainActivity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext)
+                            .setTitle("Out of Lives")
+                            .setMessage("GAME OVER MAN, GAME OVER")
+                            .setNegativeButton("Go Home", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(mContext, MainActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    mContext.startActivity(intent);
+                                }
+                            })
+                            .setPositiveButton("Play Again", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.create();
+                    alertDialog.show();
+                }
+            });
+
             mScore = 0;
             mLives = 3;
         }
