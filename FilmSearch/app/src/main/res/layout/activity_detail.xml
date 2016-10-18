@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.karenpownall.android.aca.filmsearch.DetailActivity">
+
+    <TextView
+        android:text="Lorem ipsum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:text="Lorem ipsum dolor sit amet, cu tation quidam consetetur eam, case audiam torquatos no ius. Vel an officiis tincidunt. His verear intellegebat at, ei his vidisse accumsan salutatus. Et unum possim est. Homero everti ei his, eligendi senserit te est, dolor homero iisque mel no.  Per utamur perpetua adipiscing eu, an vel oratio animal molestiae. Pri quod detracto scribentur et, ex veniam omittantur suscipiantur cum. An nam saepe constituam. Alii adhuc ut vim. In vel animal similique posidonium. Accusata delicatissimi sit id, ei expetenda aliquando eos. Eum in quot mutat pericula, deserunt consectetuer nam an. In qui docendi denique ancillae, velit eripuit convenire an nam.  Veri harum prodesset an cum, sea in ipsum possit lobortis. Nec ei insolens iudicabit tincidunt. Intellegam interesset cum te, ei vel magna efficiendi. Cu usu eligendi facilisi gubergren, no idque dignissim forensibus mel, ea mea virtute feugait splendide. In ipsum consulatu quo. "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/backgroundImage"
+        android:layout_below="@+id/titleText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/descriptionText"/>
+
+</RelativeLayout>

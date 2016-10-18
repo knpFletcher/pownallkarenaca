@@ -17,6 +17,14 @@ public class MoviesAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     private LayoutInflater mInflater;
     private Context mContext;
 
+    /* private MovieClickListener mMovieClickListener;
+
+    public MoviesAdapter (MovieClickListener movieClickListener){
+        this.mMovieClickListener = movieClickListener;
+    }
+    */
+
+
     public MoviesAdapter (Context context){
         this.mContext = context;
         this.mInflater = LayoutInflater.from(context);
@@ -56,5 +64,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MovieViewHolder> {
         //if not called, app will crash
         notifyDataSetChanged();
     }
+
+    public List<Movie> getMovieList(){
+        return mMovieList;
+    }
+
 
 }

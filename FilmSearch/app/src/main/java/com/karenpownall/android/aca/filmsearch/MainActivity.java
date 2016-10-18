@@ -20,10 +20,20 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static android.support.design.widget.Snackbar.make;
+import static com.karenpownall.android.aca.filmsearch.R.id.recyclerView;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private MoviesAdapter mMoviesAdapter;
+
+    Retrofit restAdapter = new Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("http://api.themoviedb.org/")
+            .build();
+
+    MoviesApiService apiService = restAdapter.create(MoviesApiService.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +46,24 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = (RecyclerView) findViewById(recyclerView);
+
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        // do whatever
+                    }
+
+                    @Override public void onLongItemClick(View view, int position) {
+                        // do whatever
+                    }
+                })
+        );
 
 
         //could also create a new method to hold all of this,
@@ -55,13 +77,6 @@ public class MainActivity extends AppCompatActivity {
             movies.add(new Movie());
         }
         mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
-
-        Retrofit restAdapter = new Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://api.themoviedb.org/")
-                .build();
-
-        MoviesApiService apiService = restAdapter.create(MoviesApiService.class);
 
         Call<Movie.MovieResult> call = apiService.getPopularMovies();
         call.enqueue(new Callback<Movie.MovieResult>() {
@@ -77,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -99,4 +115,14 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+    //TODO put inside poster click
+    /*
+    Intent mIntent = new Intent(this, DetailActivity.class);
+
+    mIntent.putExtra("Movie", mMovie);
+    startActivity(mIntent);
+    */
 }

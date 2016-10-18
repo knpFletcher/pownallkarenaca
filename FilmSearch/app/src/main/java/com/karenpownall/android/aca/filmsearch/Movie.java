@@ -2,9 +2,12 @@ package com.karenpownall.android.aca.filmsearch;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Movie {
+@SuppressWarnings("serial")
+public class Movie implements Serializable {
+    //implement serializable
 
     public static final String TMDB_IMAGE_PATH = "http://image.tmdb.org/t/p/w500";
     //picasso needs this to return image
@@ -22,7 +25,6 @@ public class Movie {
 
 
     public Movie(){}
-
 
     public String getTitle() {
         return mTitle;
