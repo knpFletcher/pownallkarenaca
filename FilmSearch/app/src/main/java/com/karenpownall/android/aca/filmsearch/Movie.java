@@ -26,11 +26,11 @@ public class Movie implements Serializable {
 
     public Movie(){}
 
-    public String getTitle() {
+    public String getMovieTitle() {
         return mTitle;
     }
 
-    public void setTitle(String title) {
+    public void setMovieTitle(String title) {
         mTitle = title;
     }
 

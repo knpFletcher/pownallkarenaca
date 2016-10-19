@@ -1,6 +1,7 @@
 package com.karenpownall.android.aca.filmsearch;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -10,7 +11,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private TextView titleText;
     private TextView descriptionText;
-    private ImageView backgroundImage;
+    private ImageView backdropImage;
 
     public Movie mMovie = new Movie();
 
@@ -19,33 +20,27 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        titleText = (TextView) findViewById(R.id.titleText);
+        descriptionText = (TextView) findViewById(R.id.descriptionText);
+        backdropImage = (ImageView) findViewById(R.id.backdropImage);
 
+        //put data from intent into movie class
         Intent mIntent = getIntent();
         mIntent.getSerializableExtra("Movie");
 
-        /*
-        mMovie.getTitle();
-        mMovie.getBackdrop();
-        mMovie.getDescription();
-        */
+        //set equal to data pulled down
+        Movie mMovie = (Movie) mIntent.getSerializableExtra("Movie");
 
-
-        //put data from intent into movie class
-
-        titleText = (TextView) findViewById(R.id.titleText);
-        descriptionText = (TextView) findViewById(R.id.descriptionText);
-        backgroundImage = (ImageView) findViewById(R.id.backgroundImage);
-
-        //pass data from Movies adapter using extra
-        //needs intent with extra with data passing
-        //search passing object to activity
-
-        //use getter methods to set views
-        titleText.setText(getTitle());
-        //descriptionText.setText(getDescription());
-        //backgroundImage.getBackdrop();
-
-
+        //use movie object to call methods - chain methods
+        titleText.setText(mMovie.getMovieTitle()); //WHY DO YOU RETURN NULL!?
+        descriptionText.setText(mMovie.getDescription());
+        backdropImage.setImageURI(Uri.parse(mMovie.getBackdrop()));
     }
 
+
 }
+
+
+//pass data from Movies adapter using extra
+//needs intent with extra with data passing
+//search passing object to activity

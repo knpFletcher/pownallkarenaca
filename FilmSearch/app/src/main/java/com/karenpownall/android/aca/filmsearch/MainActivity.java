@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override public void onItemClick(View view, int position) {
 
                     Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
-                    mIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
+                    mIntent.putExtra("Movie", mMoviesAdapter.getMovieList().get(position));
+                    //.getMovieList built into adapter, get built into ArrayList
                     startActivity(mIntent);
                 }
 
