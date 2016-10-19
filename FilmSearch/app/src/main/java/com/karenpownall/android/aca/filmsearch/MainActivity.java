@@ -1,5 +1,6 @@
 package com.karenpownall.android.aca.filmsearch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -53,19 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(recyclerView);
 
-        recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override public void onItemClick(View view, int position) {
-                        // do whatever
-                    }
-
-                    @Override public void onLongItemClick(View view, int position) {
-                        // do whatever
-                    }
-                })
-        );
-
-
         //could also create a new method to hold all of this,
         // prevent onCreate from getting clogged up
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -91,6 +79,30 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
+
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(),
+                mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+
+                @Override public void onItemClick(View view, int position) {
+
+                    Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
+                    mIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
+                    startActivity(mIntent);
+                }
+
+                @Override
+                public void onLongItemClick(View view, int position) {
+
+                    //TODO make favorites functionality here instead
+
+                    Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
+
+                    mIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
+                    startActivity(mIntent);
+
+                }
+            })
+        );
     }
 
 
@@ -98,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        //TODO add back button
+
         return true;
     }
 
@@ -116,13 +131,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
-    //TODO put inside poster click
-    /*
-    Intent mIntent = new Intent(this, DetailActivity.class);
-
-    mIntent.putExtra("Movie", mMovie);
-    startActivity(mIntent);
-    */
 }

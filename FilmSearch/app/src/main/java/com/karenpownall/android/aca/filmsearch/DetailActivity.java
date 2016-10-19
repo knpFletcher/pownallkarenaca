@@ -12,12 +12,25 @@ public class DetailActivity extends AppCompatActivity {
     private TextView descriptionText;
     private ImageView backgroundImage;
 
+    public Movie mMovie = new Movie();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+
         Intent mIntent = getIntent();
+        mIntent.getSerializableExtra("Movie");
+
+        /*
+        mMovie.getTitle();
+        mMovie.getBackdrop();
+        mMovie.getDescription();
+        */
+
+
+        //put data from intent into movie class
 
         titleText = (TextView) findViewById(R.id.titleText);
         descriptionText = (TextView) findViewById(R.id.descriptionText);
@@ -28,8 +41,11 @@ public class DetailActivity extends AppCompatActivity {
         //search passing object to activity
 
         //use getter methods to set views
-        //titleText.setText(.getTitle());
+        titleText.setText(getTitle());
+        //descriptionText.setText(getDescription());
+        //backgroundImage.getBackdrop();
 
 
     }
+
 }
