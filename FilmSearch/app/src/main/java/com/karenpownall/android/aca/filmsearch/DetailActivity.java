@@ -1,11 +1,13 @@
 package com.karenpownall.android.aca.filmsearch;
 
+import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -14,6 +16,7 @@ public class DetailActivity extends AppCompatActivity {
     private ImageView backdropImage;
 
     public Movie mMovie = new Movie();
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +35,13 @@ public class DetailActivity extends AppCompatActivity {
         Movie mMovie = (Movie) mIntent.getSerializableExtra("Movie");
 
         //use movie object to call methods - chain methods
-        titleText.setText(mMovie.getMovieTitle()); //WHY DO YOU RETURN NULL!?
+        titleText.setText(mMovie.getMovieTitle());
         descriptionText.setText(mMovie.getDescription());
-        backdropImage.setImageURI(Uri.parse(mMovie.getBackdrop()));
+
+        Picasso.with(mContext)
+                .load(mMovie.getBackdrop())
+                .placeholder(R.color.colorAccent)
+                .into(backdropImage);
     }
 
 

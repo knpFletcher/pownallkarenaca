@@ -7,11 +7,12 @@ import java.util.List;
 
 @SuppressWarnings("serial")
 public class Movie implements Serializable {
-    //implement serializable
+    //implement serializable - need this for passing through intent
 
     public static final String TMDB_IMAGE_PATH = "http://image.tmdb.org/t/p/w500";
     //picasso needs this to return image
 
+    @SerializedName("title")
     private String mTitle;
 
     @SerializedName("poster_path")
