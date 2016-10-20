@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/kkpwnall/Desktop/repo-reverted/pownallkarenaca/MultiFlavorApp/app/build/intermediates/incremental/mergeFreeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 74,
+                    "endOffset": 125
+                },
+                "from": {
+                    "file": "/Users/kkpwnall/Desktop/repo-reverted/pownallkarenaca/MultiFlavorApp/app/build/generated/res/resValues/androidTest/free/debug/values/generated.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 160,
+                        "endColumn": 74,
+                        "endOffset": 230
+                    }
+                }
+            }
+        ]
+    }
+]
