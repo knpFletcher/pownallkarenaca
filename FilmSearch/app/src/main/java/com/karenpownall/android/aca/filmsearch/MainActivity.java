@@ -3,7 +3,6 @@ package com.karenpownall.android.aca.filmsearch;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,7 +20,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static android.support.design.widget.Snackbar.make;
 import static com.karenpownall.android.aca.filmsearch.R.id.recyclerView;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,38 +45,26 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //set inside dialog fragment
+                Call<Movie.MovieResult> call = apiService.searchMovies();
+                call.enqueue(new Callback<Movie.MovieResult>() {
+
+                    @Override
+                    public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
+                        mMoviesAdapter.setMovieList(response.body().getResults());
+                    }
+
+                    @Override
+                    public void onFailure(Call<Movie.MovieResult> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
             }
         });
 
         mRecyclerView = (RecyclerView) findViewById(recyclerView);
 
-        //could also create a new method to hold all of this,
-        // prevent onCreate from getting clogged up
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        mMoviesAdapter = new MoviesAdapter(this);
-        mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
-        List<Movie> movies = new ArrayList<>();
-
-        for (int i = 0; i < 26; i++){
-            movies.add(new Movie());
-        }
-        mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
-
-        Call<Movie.MovieResult> call = apiService.getPopularMovies();
-        call.enqueue(new Callback<Movie.MovieResult>() {
-
-            @Override
-            public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
-                mMoviesAdapter.setMovieList(response.body().getResults());
-            }
-
-            @Override
-            public void onFailure(Call<Movie.MovieResult> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
+        setRecyclerView();
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(),
                 mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
@@ -104,6 +90,32 @@ public class MainActivity extends AppCompatActivity {
                 }
             })
         );
+    }
+
+    private void setRecyclerView() {
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        mMoviesAdapter = new MoviesAdapter(this);
+        mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
+        List<Movie> movies = new ArrayList<>();
+
+        for (int i = 0; i < 26; i++){
+            movies.add(new Movie());
+        }
+        mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
+
+        Call<Movie.MovieResult> call = apiService.getPopularMovies();
+        call.enqueue(new Callback<Movie.MovieResult>() {
+
+            @Override
+            public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
+                mMoviesAdapter.setMovieList(response.body().getResults());
+            }
+
+            @Override
+            public void onFailure(Call<Movie.MovieResult> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
     }
 
 
