@@ -18,6 +18,8 @@ public class DetailActivity extends AppCompatActivity {
     public Movie mMovie = new Movie();
     Context mContext;
 
+    public DetailActivity(){}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

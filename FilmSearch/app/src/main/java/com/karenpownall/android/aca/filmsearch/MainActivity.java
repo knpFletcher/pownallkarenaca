@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.karenpownall.android.aca.filmsearch.R.id.recyclerView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private RecyclerView mRecyclerView;
     private MoviesAdapter mMoviesAdapter;
@@ -114,8 +114,6 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        //TODO add back button
-
         return true;
     }
 
@@ -128,6 +126,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.back) {
+            //DialogNewNote dialog = new DialogNewNote();
+            //dialog.show(getFragmentManager(), "");
             return true;
         }
 

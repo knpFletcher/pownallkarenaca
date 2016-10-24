@@ -8,7 +8,7 @@
         android:title="@string/favorites"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/action_add"
+    <item android:id="@+id/back"
           android:icon="@drawable/ic_arrow_back_white_24dp"
           android:title="@string/back"
           app:showAsAction="ifRoom" />
