@@ -1,0 +1,7 @@
+#Fri Oct 21 10:19:45 CDT 2016
+base.0=/Users/kkpwnall/Desktop/repo-reverted/pownallkarenaca/WidgetDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6e205bb3f6e11bc941a0a92fd1c83efedf99978c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/kkpwnall/Desktop/repo-reverted/pownallkarenaca/WidgetDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9de3542f2e0177be715277beb456600da0c11d80/classes.dex
+base.1=/Users/kkpwnall/Desktop/repo-reverted/pownallkarenaca/WidgetDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9de3542f2e0177be715277beb456600da0c11d80
+file.0=/Users/kkpwnall/Desktop/repo-reverted/pownallkarenaca/WidgetDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6e205bb3f6e11bc941a0a92fd1c83efedf99978c/classes.dex
