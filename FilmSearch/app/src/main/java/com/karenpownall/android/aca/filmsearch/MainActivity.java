@@ -45,20 +45,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set inside dialog fragment
-                Call<Movie.MovieResult> call = apiService.searchMovies();
-                call.enqueue(new Callback<Movie.MovieResult>() {
 
-                    @Override
-                    public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
-                        mMoviesAdapter.setMovieList(response.body().getResults());
-                    }
-
-                    @Override
-                    public void onFailure(Call<Movie.MovieResult> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
+                //need fragment manager
+                DialogSearch dialogSearch = new DialogSearch();
+                dialogSearch.show(getFragmentManager(), "123");
             }
         });
 
@@ -71,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override public void onItemClick(View view, int position) {
 
-                    Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
-                    mIntent.putExtra("Movie", mMoviesAdapter.getMovieList().get(position));
+                    Intent mDetailIntent = new Intent (getApplicationContext(), DetailActivity.class);
+                    mDetailIntent.putExtra("Movie", mMoviesAdapter.getMovieList().get(position));
                     //.getMovieList built into adapter, get built into ArrayList
-                    startActivity(mIntent);
+                    startActivity(mDetailIntent);
                 }
 
                 @Override
@@ -82,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
                     //TODO make favorites functionality here instead
 
-                    Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
+                    Intent mFavoritesIntent = new Intent (getApplicationContext(), DetailActivity.class);
 
-                    mIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
-                    startActivity(mIntent);
+                    mFavoritesIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
+                    startActivity(mFavoritesIntent);
 
                 }
             })

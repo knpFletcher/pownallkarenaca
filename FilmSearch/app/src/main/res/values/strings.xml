@@ -4,5 +4,8 @@
     <string name="description">Loading Description...</string>
     <string name="title">Loading title...</string>
     <string name="favorites">Favorites</string>
+    <string name="search_hint">Search Movie Titles</string>
+    <string name="cancel">Cancel</string>
     <string name="search">Search</string>
+    <string name="back">Back</string>
 </resources>
