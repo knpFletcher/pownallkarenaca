@@ -1,12 +1,10 @@
 package com.karenpownall.android.aca.filmsearch;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,14 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -70,9 +62,10 @@ public class DialogSearch extends DialogFragment{
             @Override
             public void onClick(View v) {
 
-                mSearchText.getText().toString();
 
-                Call<Movie.MovieResult> call = apiService.searchMovies();
+                /* toss back to MainActivity to handle search
+
+                Call<Movie.MovieResult> call = apiService.getSearchedMovies(mSearchText.getText().toString());
                 call.enqueue(new Callback<Movie.MovieResult>() {
 
                     @Override
@@ -86,24 +79,7 @@ public class DialogSearch extends DialogFragment{
                     }
                 });
 
-                Runnable runnable = new Runnable() {
-                    public void run() {
-                        runOnUiThread(new Runnable() {
-                            public void run()
-                            {
-                                mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-                                mMoviesAdapter = new MoviesAdapter(this);
-                                mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
-                                List<Movie> movies = new ArrayList<>();
-
-                                for (int i = 0; i < 26; i++){
-                                    movies.add(new Movie());
-                                }
-                                mMoviesAdapter.setMovieList(movies);
-                            }
-                        });
-                    }
-                };
+                */
 
             }
         });
