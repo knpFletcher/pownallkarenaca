@@ -11,7 +11,7 @@ public class MainActivity extends Activity {
     // It will also hold the logic of the game
     // and respond to screen touches as well
     GameView gameView;
-
+    DialogHome mDialogHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +25,11 @@ public class MainActivity extends Activity {
         display.getSize(size);
 
         // Initialize gameView and set it as the view
-        gameView = new GameView(this, size.x, size.y);
+        gameView = new GameView(this, size.x, size.y, this);
         setContentView(gameView);
 
+        mDialogHome = new DialogHome();
+        mDialogHome.show(getFragmentManager(),"");
     } //end onCreate
 
     // This method executes when the player starts the game
@@ -47,5 +49,4 @@ public class MainActivity extends Activity {
         // Tell the gameView pause method to execute
         gameView.pause();
     }
-
 } //end MainActivity

@@ -1,6 +1,9 @@
 package com.karenpownall.android.aca.pong;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Canvas;
@@ -71,19 +74,23 @@ public class GameView extends SurfaceView implements Runnable{
     // Lives
     int mLives = 3;
 
+    Context mContext;
+    MainActivity mMainActivity;
 
     /*
     When we call new() on gameView
     This custom constructor runs
     */
 
-    public GameView(Context context, int x, int y) {
+    public GameView(Context context, int x, int y, MainActivity activity) {
 
      /*
     The next line of code asks the
     SurfaceView class to set up our object.
      */
         super(context);
+        mContext = context;
+        mMainActivity = activity;
 
         // Set the screen width and height
         mScreenX = x;
@@ -157,10 +164,35 @@ public class GameView extends SurfaceView implements Runnable{
 
         // if game over reset scores and mLives
         if(mLives == 0) {
+
+            mMainActivity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext)
+                            .setTitle("Out of Lives")
+                            .setMessage("GAME OVER MAN, GAME OVER")
+                            .setNegativeButton("Go Home", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(mContext, MainActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    mContext.startActivity(intent);
+                                }
+                            })
+                            .setPositiveButton("Play Again", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.create();
+                    alertDialog.show();
+                }
+            });
+
             mScore = 0;
             mLives = 3;
         }
-
     }
 
     @Override
@@ -170,7 +202,6 @@ public class GameView extends SurfaceView implements Runnable{
             // Capture the current time in milliseconds in startFrameTime
             long startFrameTime = System.currentTimeMillis();
 
-            // Update the frame
             // Update the frame
             if(!mPaused){
                 update();
@@ -268,23 +299,27 @@ public class GameView extends SurfaceView implements Runnable{
             mCanvas = mOurHolder.lockCanvas();
 
             // Draw the background color
-            mCanvas.drawColor(Color.argb(255, 26, 128, 182));
+            //mCanvas.drawColor(Color.argb(255, 26, 128, 182));
+            mCanvas.drawColor(Color.argb(225, 38, 38, 38)); //grey
 
             // Choose the brush color for drawing
-            mPaint.setColor(Color.argb(255, 255, 255, 255));
+            //mPaint.setColor(Color.argb(255, 255, 255, 255));
 
             // Draw the mPaddle
+            mPaint.setColor(Color.argb(255, 72, 225, 20)); //green
             mCanvas.drawRect(mPaddle.getRect(), mPaint);
 
             // Draw the mBall
+            mPaint.setColor(Color.argb(255, 0, 230, 240)); //blue
             mCanvas.drawRect(mBall.getRect(), mPaint);
 
             // Choose the brush color for drawing
-            mPaint.setColor(Color.argb(255, 255, 255, 255));
+            mPaint.setColor(Color.argb(255, 202, 0, 253));
 
             // Draw the mScore
-            mPaint.setTextSize(40);
+            mPaint.setTextSize(60);
             mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives, 10, 50, mPaint);
+            mPaint.setColor(Color.argb(255, 202, 0, 253)); //purple
 
             // Draw everything to the screen
             mOurHolder.unlockCanvasAndPost(mCanvas);
@@ -343,5 +378,6 @@ public class GameView extends SurfaceView implements Runnable{
         }
         return true;
     } //end onTouchEvent
+
 
 } //end GameView class
