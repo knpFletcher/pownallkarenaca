@@ -25,8 +25,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity{
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.fab) FloatingActionButton fab;
 
     private MoviesAdapter mMoviesAdapter;
+
+    Call<Movie.MovieResult> mCall;
 
     Retrofit restAdapter = new Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
@@ -44,19 +47,18 @@ public class MainActivity extends AppCompatActivity{
 
         ButterKnife.bind(this);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //need fragment manager
                 DialogSearch dialogSearch = new DialogSearch();
                 dialogSearch.show(getFragmentManager(), "123");
             }
         });
 
-
         setRecyclerView();
+        mCall = apiService.getPopularMovies();
+        callMovieResult();
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(),
                 mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
@@ -84,19 +86,8 @@ public class MainActivity extends AppCompatActivity{
         );
     } //end onCreate
 
-    private void setRecyclerView() {
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        mMoviesAdapter = new MoviesAdapter(this);
-        mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
-        List<Movie> movies = new ArrayList<>();
-
-        for (int i = 0; i < 26; i++){
-            movies.add(new Movie());
-        }
-        mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
-
-        Call<Movie.MovieResult> call = apiService.getPopularMovies();
-        call.enqueue(new Callback<Movie.MovieResult>() {
+    private void callMovieResult() {
+        mCall.enqueue(new Callback<Movie.MovieResult>() {
 
             @Override
             public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
@@ -108,6 +99,19 @@ public class MainActivity extends AppCompatActivity{
                 t.printStackTrace();
             }
         });
+    }
+
+    private void setRecyclerView() {
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        mMoviesAdapter = new MoviesAdapter(this);
+        mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
+        List<Movie> movies = new ArrayList<>();
+
+        for (int i = 0; i < 26; i++){
+            movies.add(new Movie());
+        }
+        mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
+
     } //end setRecyclerView
 
     @Override
@@ -130,13 +134,41 @@ public class MainActivity extends AppCompatActivity{
             return true;
         }
 
+        /*
         if (id == R.id.back) {
             //DialogNewNote dialog = new DialogNewNote();
             //dialog.show(getFragmentManager(), "");
             return true;
         }
+        */
 
         return super.onOptionsItemSelected(item);
     } //end OnOptionsItemSelected
 
+
+    // move Retrofit call inside a method.
+    // onResume() gets hit in MainActivity (when you bounce back from your search fragment)
+    // call that Retrofit method and perform the correct call
+    // based on whether or not you have a search string.
+
+
+    /*
+    @Override
+    protected void onResume() {
+
+        Bundle bundle = getArguments();
+        if(bundle!=null) {
+            mSearch = bundle.getString("search");
+        }
+        movieSearch();
+
+        if(mSearch==null || mSearch.equals("")) {
+            mCall = apiService.getPopularMovies();
+        }else{
+            mCall = apiService.getSearchedMovies(mSearch);
+        }
+        super.onResume();
+
+    } //end onResume
+    */
 } //end MainActivity
