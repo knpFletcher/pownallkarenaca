@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity{
 
     Call<Movie.MovieResult> mCall;
 
+
     Retrofit restAdapter = new Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("http://api.themoviedb.org/")
@@ -134,41 +135,37 @@ public class MainActivity extends AppCompatActivity{
             return true;
         }
 
-        /*
-        if (id == R.id.back) {
-            //DialogNewNote dialog = new DialogNewNote();
-            //dialog.show(getFragmentManager(), "");
-            return true;
-        }
-        */
-
         return super.onOptionsItemSelected(item);
     } //end OnOptionsItemSelected
 
-
-    // move Retrofit call inside a method.
-    // onResume() gets hit in MainActivity (when you bounce back from your search fragment)
-    // call that Retrofit method and perform the correct call
-    // based on whether or not you have a search string.
-
-
-    /*
     @Override
     protected void onResume() {
 
-        Bundle bundle = getArguments();
-        if(bundle!=null) {
-            mSearch = bundle.getString("search");
-        }
-        movieSearch();
+        String mSearch;
+                try{Intent mSearchIntent = getIntent();
 
-        if(mSearch==null || mSearch.equals("")) {
-            mCall = apiService.getPopularMovies();
-        }else{
-            mCall = apiService.getSearchedMovies(mSearch);
-        }
+                    if (mSearchIntent.getStringExtra("Search") != null) {
+
+                        mSearch = mSearchIntent.getStringExtra("Search");
+                        mCall = apiService.getSearchedMovies(mSearch);
+                        setRecyclerView();
+                        callMovieResult();
+                    } else{
+                        mCall = apiService.getPopularMovies();
+                        setRecyclerView();
+                        callMovieResult();
+
+                    }
+
+                } catch(NullPointerException nullObject) {
+
+                        mCall = apiService.getPopularMovies();
+                        setRecyclerView();
+                        callMovieResult();
+                }
+
         super.onResume();
 
     } //end onResume
-    */
+
 } //end MainActivity

@@ -1,21 +1,19 @@
 package com.karenpownall.android.aca.filmsearch;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.karenpownall.android.aca.filmsearch.R.layout.dialog_search;
 
@@ -24,28 +22,19 @@ public class DialogSearch extends DialogFragment{
     @BindView(R.id.queryButton) Button mQueryButton;
     @BindView(R.id.searchText) EditText mSearchText;
     @BindView(R.id.progressBar) ProgressBar mProgressBar;
-    @BindView(R.id.cancelButton) Button mCancelButton;
 
-    private RecyclerView mRecyclerView;
-    private MoviesAdapter mMoviesAdapter;
-
-    Retrofit restAdapter = new Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://api.themoviedb.org/")
-            .build();
-
-    MoviesApiService apiService = restAdapter.create(MoviesApiService.class);
+    Button mCancelButton;
 
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        LayoutInflater inflater = getActivity().getLayoutInflater();
-        //View dialogView = inflater.inflate(R.layout.dialog_search, null);
-        View view = LayoutInflater.from(getActivity()).inflate(dialog_search, null);
+        View dialogView = inflater.inflate(R.layout.dialog_search, null);
 
-        ButterKnife.bind(this, view);
+        ButterKnife.bind(this, dialogView);
+
+        mCancelButton = (Button) dialogView.findViewById(R.id.cancelButton);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder.setView(dialog_search).setMessage("Search");
@@ -54,7 +43,7 @@ public class DialogSearch extends DialogFragment{
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dismiss();
+                getDialog().dismiss();
             }
         });
 
@@ -62,29 +51,13 @@ public class DialogSearch extends DialogFragment{
             @Override
             public void onClick(View v) {
 
-
-                /* TODO toss search as string back to MainActivity to handle search
-                pass the search string back to the MainActivity inside a Bundle.
-
-                Call<Movie.MovieResult> call = apiService.getSearchedMovies(mSearchText.getText().toString());
-                call.enqueue(new Callback<Movie.MovieResult>() {
-
-                    @Override
-                    public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
-                        mMoviesAdapter.setMovieList(response.body().getResults());
-                    }
-
-                    @Override
-                    public void onFailure(Call<Movie.MovieResult> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
-
-                */
+                Intent mSearchIntent = new Intent(getActivity(), MainActivity.class);
+                mSearchIntent.putExtra("Search", mSearchText.getText().toString());
+                startActivity(mSearchIntent);
 
             }
         });
 
-        return builder.create();
+        return dialogView;
     }
 }
