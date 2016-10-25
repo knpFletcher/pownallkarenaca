@@ -63,7 +63,7 @@ public class DialogSearch extends DialogFragment{
             public void onClick(View v) {
 
 
-                /* toss back to MainActivity to handle search
+                /* TODO toss search as string back to MainActivity to handle search
 
                 Call<Movie.MovieResult> call = apiService.getSearchedMovies(mSearchText.getText().toString());
                 call.enqueue(new Callback<Movie.MovieResult>() {

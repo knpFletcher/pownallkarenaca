@@ -14,17 +14,18 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.karenpownall.android.aca.filmsearch.R.id.recyclerView;
-
 public class MainActivity extends AppCompatActivity{
 
-    private RecyclerView mRecyclerView;
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+
     private MoviesAdapter mMoviesAdapter;
 
     Retrofit restAdapter = new Retrofit.Builder()
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        ButterKnife.bind(this);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +55,6 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        mRecyclerView = (RecyclerView) findViewById(recyclerView);
 
         setRecyclerView();
 
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity{
                 }
             })
         );
-    }
+    } //end onCreate
 
     private void setRecyclerView() {
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -106,8 +108,7 @@ public class MainActivity extends AppCompatActivity{
                 t.printStackTrace();
             }
         });
-    }
-
+    } //end setRecyclerView
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         return true;
-    }
+    } //end onCreateOptionsMenu
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -136,6 +137,6 @@ public class MainActivity extends AppCompatActivity{
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    } //end OnOptionsItemSelected
 
-}
+} //end MainActivity
