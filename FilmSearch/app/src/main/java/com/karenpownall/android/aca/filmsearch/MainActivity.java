@@ -14,18 +14,23 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.karenpownall.android.aca.filmsearch.R.id.recyclerView;
+public class MainActivity extends AppCompatActivity{
 
-public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.fab) FloatingActionButton fab;
 
-    private RecyclerView mRecyclerView;
     private MoviesAdapter mMoviesAdapter;
+
+    Call<Movie.MovieResult> mCall;
+
 
     Retrofit restAdapter = new Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
@@ -41,40 +46,30 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        ButterKnife.bind(this);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //set inside dialog fragment
-                Call<Movie.MovieResult> call = apiService.searchMovies();
-                call.enqueue(new Callback<Movie.MovieResult>() {
 
-                    @Override
-                    public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
-                        mMoviesAdapter.setMovieList(response.body().getResults());
-                    }
-
-                    @Override
-                    public void onFailure(Call<Movie.MovieResult> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
+                DialogSearch dialogSearch = new DialogSearch();
+                dialogSearch.show(getFragmentManager(), "123");
             }
         });
 
-        mRecyclerView = (RecyclerView) findViewById(recyclerView);
-
         setRecyclerView();
+        mCall = apiService.getPopularMovies();
+        callMovieResult();
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(),
                 mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
 
                 @Override public void onItemClick(View view, int position) {
 
-                    Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
-                    mIntent.putExtra("Movie", mMoviesAdapter.getMovieList().get(position));
+                    Intent mDetailIntent = new Intent (getApplicationContext(), DetailActivity.class);
+                    mDetailIntent.putExtra("Movie", mMoviesAdapter.getMovieList().get(position));
                     //.getMovieList built into adapter, get built into ArrayList
-                    startActivity(mIntent);
+                    startActivity(mDetailIntent);
                 }
 
                 @Override
@@ -82,29 +77,18 @@ public class MainActivity extends AppCompatActivity {
 
                     //TODO make favorites functionality here instead
 
-                    Intent mIntent = new Intent (getApplicationContext(), DetailActivity.class);
+                    Intent mFavoritesIntent = new Intent (getApplicationContext(), DetailActivity.class);
 
-                    mIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
-                    startActivity(mIntent);
+                    mFavoritesIntent.putExtra("Movie", String.valueOf(mMoviesAdapter));
+                    startActivity(mFavoritesIntent);
 
                 }
             })
         );
-    }
+    } //end onCreate
 
-    private void setRecyclerView() {
-        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        mMoviesAdapter = new MoviesAdapter(this);
-        mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
-        List<Movie> movies = new ArrayList<>();
-
-        for (int i = 0; i < 26; i++){
-            movies.add(new Movie());
-        }
-        mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
-
-        Call<Movie.MovieResult> call = apiService.getPopularMovies();
-        call.enqueue(new Callback<Movie.MovieResult>() {
+    private void callMovieResult() {
+        mCall.enqueue(new Callback<Movie.MovieResult>() {
 
             @Override
             public void onResponse(Call<Movie.MovieResult> call, Response<Movie.MovieResult> response) {
@@ -118,16 +102,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setRecyclerView() {
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        mMoviesAdapter = new MoviesAdapter(this);
+        mRecyclerView.setAdapter(mMoviesAdapter); //set adapter to recycler view
+        List<Movie> movies = new ArrayList<>();
+
+        for (int i = 0; i < 26; i++){
+            movies.add(new Movie());
+        }
+        mMoviesAdapter.setMovieList(movies);  //pass in movie list ArrayList
+
+    } //end setRecyclerView
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        //TODO add back button
-
         return true;
-    }
+    } //end onCreateOptionsMenu
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -142,6 +136,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    } //end OnOptionsItemSelected
 
-}
+    @Override
+    protected void onResume() {
+
+        String mSearch;
+                try{Intent mSearchIntent = getIntent();
+
+                    if (mSearchIntent.getStringExtra("Search") != null) {
+
+                        mSearch = mSearchIntent.getStringExtra("Search");
+                        mCall = apiService.getSearchedMovies(mSearch);
+                        setRecyclerView();
+                        callMovieResult();
+                    } else{
+                        mCall = apiService.getPopularMovies();
+                        setRecyclerView();
+                        callMovieResult();
+
+                    }
+
+                } catch(NullPointerException nullObject) {
+
+                        mCall = apiService.getPopularMovies();
+                        setRecyclerView();
+                        callMovieResult();
+                }
+
+        super.onResume();
+
+    } //end onResume
+
+} //end MainActivity
