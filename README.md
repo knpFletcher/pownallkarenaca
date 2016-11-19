@@ -1,6 +1,6 @@
 # pownallkarenaca
 
-This repo contains all class projects and lab assignments from the Arkansas Coding Academy Fall 2016 class in Android Development. 
+This repo contains the majority of class projects and lab assignments from the Arkansas Coding Academy Fall 2016 class in Android Development. 
 
 Particular projects of note are NoteToSelf, FilmSearch, WhereItsSnap, MagicBall, and Pong which all serve to demonstrate the skills I have learned from this bootcamp. 
 
