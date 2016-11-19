@@ -11,5 +11,5 @@ public interface MoviesApiService {
 
     //search call query goes here
     @GET("3/search/movie?api_key=6b7579445faf46d6b108204543118376&language=en-US")
-    Call<Movie.MovieResult> getSearchedMovies (@Query("query") String q);
+    Call<Movie.MovieResult> getSearchedMovies(@Query("query") String q);
 }

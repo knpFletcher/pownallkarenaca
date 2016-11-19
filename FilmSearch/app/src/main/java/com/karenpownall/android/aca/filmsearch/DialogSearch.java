@@ -34,7 +34,7 @@ public class DialogSearch extends DialogFragment{
 
         ButterKnife.bind(this, dialogView);
 
-        mCancelButton = (Button) dialogView.findViewById(R.id.cancelButton);
+        //mCancelButton = (Button) dialogView.findViewById(R.id.cancelButton);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder.setView(dialog_search).setMessage("Search");

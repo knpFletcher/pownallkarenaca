@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity{
 
     Call<Movie.MovieResult> mCall;
 
-
     Retrofit restAdapter = new Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("http://api.themoviedb.org/")
@@ -158,7 +157,6 @@ public class MainActivity extends AppCompatActivity{
                     }
 
                 } catch(NullPointerException nullObject) {
-
                         mCall = apiService.getPopularMovies();
                         setRecyclerView();
                         callMovieResult();
